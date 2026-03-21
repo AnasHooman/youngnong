@@ -1,0 +1,105 @@
+.app-container {
+  min-height: 100vh;
+}
+
+.app-header {
+  padding: 2rem 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.app-header .subtitle {
+  color: var(--on-surface-variant);
+  font-size: 1.125rem;
+}
+
+.user-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user-info .user-text {
+  text-align: right;
+}
+
+.user-info .user-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.user-info .farm-name {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--primary);
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.app-footer {
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  color: var(--on-surface-variant);
+  font-size: 0.875rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-container-low);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-container);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 1rem 0;
+  }
+
+  .app-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .user-info .user-text {
+    text-align: left;
+  }
+
+  .asymmetric-grid {
+    padding: 1rem !important;
+    gap: 1rem !important;
+  }
+
+  .app-footer {
+    padding: 2rem 1rem 1rem;
+  }
+}

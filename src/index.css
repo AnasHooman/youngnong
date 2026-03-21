@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+  --background: #feffd6;
+  --on-background: #38392a;
+  --primary: #506d2f;
+  --primary-container: #cbeea1;
+  --on-primary: #ffffff;
+  --primary-dim: #446024;
+  
+  --secondary: #7a6100;
+  --secondary-container: #ffe087;
+  --on-secondary-container: #644f00;
+  
+  --surface: #feffd6;
+  --surface-container: #f6f4e5;
+  --surface-container-low: #fcf9ee;
+  --surface-container-highest: #eae9d4;
+  --surface-container-lowest: #ffffff;
+  
+  --tertiary: #9e4d27;
+  --tertiary-container: #ffa179;
+  
+  --on-surface: #38392a;
+  --on-surface-variant: #656555;
+  
+  --radius-xl: 3rem;
+  --radius-lg: 1.5rem;
+  --radius-md: 1rem;
+  
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Be Vietnam Pro', 'Noto Sans KR', sans-serif;
+
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  background-color: var(--background);
+  color: var(--on-surface);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+}
+
+.garden-card {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: 0 40px 60px rgba(56, 57, 42, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.garden-card:hover {
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dim);
+}
+
+.btn-secondary {
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .asymmetric-grid {
+    grid-template-columns: 1fr;
+  }
+}
